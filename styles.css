@@ -1130,6 +1130,7 @@ body::before {
 .envelope-container {
     cursor: pointer;
     transition: var(--transition-smooth);
+    touch-action: manipulation;
 }
 
 .envelope-container:hover {

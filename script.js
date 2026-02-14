@@ -28,20 +28,20 @@ function moveNoButton() {
     const screenWidth = window.innerWidth;
     const screenHeight = window.innerHeight;
     const btnRect = btnNo.getBoundingClientRect();
-    
+
     // Calculate safe boundaries
     const maxX = screenWidth - btnRect.width - 20;
     const maxY = screenHeight - btnRect.height - 20;
-    
+
     // Generate random coordinates
     let randomX = Math.random() * maxX;
     let randomY = Math.random() * maxY;
-    
+
     // Ensure it doesn't just jump to the same spot
     btnNo.style.position = 'fixed';
     btnNo.style.left = `${randomX}px`;
     btnNo.style.top = `${randomY}px`;
-    
+
     noTouchCount++;
 }
 
@@ -55,17 +55,17 @@ btnNo.addEventListener('touchstart', (e) => {
 btnYes.addEventListener('click', () => {
     // Save to session storage
     sessionStorage.setItem('valentine_accepted', 'true');
-    
+
     // Play sound & music
     bgMusic.play().catch(e => console.log("Autoplay blocked"));
     bgMusic.volume = 0.2; // Soft background volume
     musicToggle.classList.add('playing');
-    
+
     // Heart Pop Animation
     for (let i = 0; i < 15; i++) {
         createPopHeart();
     }
-    
+
     // Fade out proposal
     proposalScreen.style.opacity = '0';
     setTimeout(() => {
@@ -88,13 +88,13 @@ function createPopHeart() {
 // Background hearts for proposal
 function createProposalHearts() {
     if (!proposalScreen || proposalScreen.style.display === 'none') return;
-    
+
     const heart = document.createElement('span');
     heart.innerHTML = ['❤️', '💖', '💕', '💗', '💓'][Math.floor(Math.random() * 5)];
     heart.style.left = Math.random() * 100 + 'vw';
     heart.style.fontSize = (Math.random() * 20 + 10) + 'px';
     heart.style.animationDuration = (Math.random() * 3 + 3) + 's';
-    
+
     proposalHearts.appendChild(heart);
     setTimeout(() => heart.remove(), 6000);
 }
@@ -153,18 +153,18 @@ function initStars() {
 
 function drawStars() {
     ctx.clearRect(0, 0, starCanvas.width, starCanvas.height);
-    
+
     stars.forEach(star => {
         star.opacity += star.twinkleSpeed;
         if (star.opacity >= 1 || star.opacity <= 0.2) {
             star.twinkleSpeed = -star.twinkleSpeed;
         }
-        
+
         ctx.beginPath();
         ctx.arc(star.x, star.y, star.radius, 0, Math.PI * 2);
         ctx.fillStyle = `rgba(255, 255, 255, ${star.opacity})`;
         ctx.fill();
-        
+
         if (star.radius > 1) {
             ctx.beginPath();
             ctx.arc(star.x, star.y, star.radius * 3, 0, Math.PI * 2);
@@ -172,7 +172,7 @@ function drawStars() {
             ctx.fill();
         }
     });
-    
+
     requestAnimationFrame(drawStars);
 }
 
@@ -188,10 +188,10 @@ function createParticles() {
         particle.style.left = Math.random() * 100 + '%';
         particle.style.animationDelay = Math.random() * 15 + 's';
         particle.style.animationDuration = (Math.random() * 10 + 10) + 's';
-        
+
         const colors = ['#FFB6C1', '#FF6B9D', '#FFC0CB', '#FFD700', '#E6E6FA'];
         particle.style.background = colors[Math.floor(Math.random() * colors.length)];
-        
+
         particlesContainer.appendChild(particle);
     }
 }
@@ -255,10 +255,14 @@ flipCards.forEach(card => {
 });
 
 // ===== Password Protected Letter =====
-envelope.addEventListener('click', () => {
+function openPasswordModal(e) {
+    if (e) e.preventDefault();
     passwordModal.classList.add('active');
     passwordInput.focus();
-});
+}
+
+envelope.addEventListener('click', openPasswordModal);
+envelope.addEventListener('touchstart', openPasswordModal, { passive: false });
 
 passwordModal.addEventListener('click', (e) => {
     if (e.target === passwordModal) {
