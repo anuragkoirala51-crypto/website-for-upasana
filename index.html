@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Upasana ❤️</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Proposal Screen Overlay -->
+    <div id="proposal-screen" class="proposal-screen">
+        <div class="proposal-hearts" id="proposalHearts"></div>
+        <div class="proposal-sparkles" id="proposalSparkles"></div>
+
+        <div class="proposal-content">
+            <div class="proposal-image-container">
+                <img src="assets/pic1.jpeg" alt="Proposal Image" class="proposal-image" id="proposalImg">
+                <!-- Placeholder image -->
+                <div class="image-glow"></div>
+            </div>
+
+            <div class="proposal-text">
+                <h1 class="proposal-greeting">Hey Upasana…</h1>
+                <p class="proposal-intro">Before you enter this little world I made…</p>
+                <p class="proposal-question">I have one question 💗</p>
+                <h2 class="proposal-main-text">Will you be my Valentine?</h2>
+            </div>
+
+            <div class="proposal-buttons">
+                <button id="p-yes" class="p-btn p-btn-yes">YES 💖</button>
+                <button id="p-no" class="p-btn p-btn-no">NO 🙈</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loading">
+        <div class="loading-heart">
+            <svg viewBox="0 0 32 29.6">
+                <path
+                    d="M23.6,0c-3.4,0-6.3,2.7-7.6,5.6C14.7,2.7,11.8,0,8.4,0C3.8,0,0,3.8,0,8.4c0,9.4,9.5,11.9,16,21.2c6.1-9.3,16-12.1,16-21.2C32,3.8,28.2,0,23.6,0z" />
+            </svg>
+        </div>
+        <p class="loading-text">Loading our story...</p>
+    </div>
+
+    <!-- Floating Music Control (Bottom Right) -->
+    <button class="music-btn" id="musicToggle" aria-label="Toggle music">
+        <span class="music-btn-heart">❤</span>
+        <span class="music-btn-icon music-btn-play" id="musicPlayIcon">▶</span>
+        <span class="music-btn-icon music-btn-pause" id="musicPauseIcon">❙❙</span>
+        <span class="music-btn-pulse"></span>
+    </button>
+
+    <!-- Floating Particles Container -->
+    <div class="particles" id="particles"></div>
+
+    <!-- Aurora Glow Effect -->
+    <div class="aurora-glow" aria-hidden="true">
+        <div class="aurora-orb aurora-orb-1"></div>
+        <div class="aurora-orb aurora-orb-2"></div>
+        <div class="aurora-orb aurora-orb-3"></div>
+    </div>
+
+    <!-- Romantic Vignette Overlay -->
+    <div class="vignette-overlay" aria-hidden="true"></div>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <canvas id="starCanvas"></canvas>
+        <div class="moon"></div>
+        <div class="hero-content">
+            <div class="hero-text">
+                <p class="reveal-text" data-delay="0">Hi Upasana,</p>
+                <p class="reveal-text" data-delay="1">If you are here…</p>
+                <p class="reveal-text" data-delay="2">this is not just a website.</p>
+                <p class="reveal-text" data-delay="3">This is my heart in digital form.</p>
+                <p class="reveal-text" data-delay="4">Which only beats for you baby</p>
+            </div>
+            <button class="cta-button" id="startButton">
+                <span>Start Our Story</span>
+                <svg class="arrow-down" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 5v14M5 12l7 7 7-7" />
+                </svg>
+            </button>
+        </div>
+    </section>
+
+    <!-- Section 1: The Day Everything Changed -->
+    <section class="section timeline-section" id="section1">
+        <div class="section-content">
+            <h2 class="section-title">The Day Everything Changed</h2>
+            <div class="timeline">
+                <div class="timeline-line"></div>
+                <div class="timeline-dot">
+                    <div class="heartbeat"></div>
+                </div>
+                <div class="timeline-date">September 9</div>
+            </div>
+            <div class="timeline-text">
+                <p>"September 9 was just a normal day for the world,</p>
+                <p>but for me, it quietly became the day my life started changing."</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 2: You Changed My World -->
+    <section class="section cards-section" id="section2">
+        <div class="section-content">
+            <h2 class="section-title">You Changed My World</h2>
+            <div class="impact-cards">
+                <div class="impact-card" data-aos="fade-up">
+                    <div class="impact-card-bg" style="background-image: url('assets/pic7.jpeg');"></div>
+                    <div class="impact-card-overlay"></div>
+                    <div class="impact-card-content">
+                        <div class="card-icon">✨</div>
+                        <p>You made my lonely days beautiful</p>
+                    </div>
+                </div>
+                <div class="impact-card" data-aos="fade-up">
+                    <div class="impact-card-bg" style="background-image: url('assets/pic8.jpeg');"></div>
+                    <div class="impact-card-overlay"></div>
+                    <div class="impact-card-content">
+                        <div class="card-icon">🥹</div>
+                        <p>You took care of this immature me</p>
+                    </div>
+                </div>
+                <div class="impact-card" data-aos="fade-up">
+                    <div class="impact-card-bg" style="background-image: url('assets/pic9.jpeg');"></div>
+                    <div class="impact-card-overlay"></div>
+                    <div class="impact-card-content">
+                        <div class="card-icon">🤫</div>
+                        <p>You understood my silence</p>
+                    </div>
+                </div>
+                <div class="impact-card" data-aos="fade-up">
+                    <div class="impact-card-bg" style="background-image: url('assets/pic10.jpeg');"></div>
+                    <div class="impact-card-overlay"></div>
+                    <div class="impact-card-content">
+                        <div class="card-icon">🤝</div>
+                        <p>You stayed when I needed you the most</p>
+                    </div>
+                </div>
+                <div class="impact-card" data-aos="fade-up">
+                    <div class="impact-card-bg" style="background-image: url('assets/pic11.jpeg');"></div>
+                    <div class="impact-card-overlay"></div>
+                    <div class="impact-card-content">
+                        <div class="card-icon">😊</div>
+                        <p>You made me smile without trying</p>
+                    </div>
+                </div>
+                <div class="impact-card" data-aos="fade-up">
+                    <div class="impact-card-bg" style="background-image: url('assets/pic12.jpeg');"></div>
+                    <div class="impact-card-overlay"></div>
+                    <div class="impact-card-content">
+                        <div class="card-icon">🏠</div>
+                        <p>You became my safe place</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 3: Memory Gallery -->
+    <section class="section gallery-section" id="section3">
+        <div class="section-content">
+            <h2 class="section-title">Our Moments</h2>
+            <div class="polaroid-gallery">
+                <div class="polaroid">
+                    <div class="polaroid-image">
+                        <img src="assets/pic1.jpeg" alt="Our Memory 1">
+                    </div>
+                    <p class="polaroid-caption">Memory #1</p>
+                </div>
+                <div class="polaroid">
+                    <div class="polaroid-image">
+                        <img src="assets/pic2.jpeg" alt="Our Memory 2">
+                    </div>
+                    <p class="polaroid-caption">Memory #2</p>
+                </div>
+                <div class="polaroid">
+                    <div class="polaroid-image">
+                        <img src="assets/pic3.jpeg" alt="Our Memory 3">
+                    </div>
+                    <p class="polaroid-caption">Memory #3</p>
+                </div>
+                <div class="polaroid">
+                    <div class="polaroid-image">
+                        <img src="assets/pic4.jpeg" alt="Our Memory 4">
+                    </div>
+                    <p class="polaroid-caption">Memory #4</p>
+                </div>
+                <div class="polaroid">
+                    <div class="polaroid-image">
+                        <img src="assets/pic5.jpeg" alt="Our Memory 5">
+                    </div>
+                    <p class="polaroid-caption">Memory #5</p>
+                </div>
+                <div class="polaroid">
+                    <div class="polaroid-image">
+                        <img src="assets/pic6.jpeg" alt="Our Memory 6">
+                    </div>
+                    <p class="polaroid-caption">Memory #6</p>
+                </div>
+            </div>
+            <p class="gallery-quote">"Every small moment with you quietly became my favorite memory."</p>
+        </div>
+    </section>
+
+    <!-- Section 4: Reasons I Love You -->
+    <section class="section reasons-section" id="section4">
+        <div class="section-content">
+            <h2 class="section-title">Reasons I Love You</h2>
+            <p class="section-subtitle">Click each card to reveal</p>
+            <div class="flip-cards-grid">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front"><span>1</span></div>
+                        <div class="flip-card-back">
+                            <p>Your smile fixes my worst days</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front"><span>2</span></div>
+                        <div class="flip-card-back">
+                            <p>You listen even to my nonsense</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front"><span>3</span></div>
+                        <div class="flip-card-back">
+                            <p>You care more than you show</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front"><span>4</span></div>
+                        <div class="flip-card-back">
+                            <p>You make me feel special</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front"><span>5</span></div>
+                        <div class="flip-card-back">
+                            <p>You understand my mood without words</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front"><span>6</span></div>
+                        <div class="flip-card-back">
+                            <p>You handle my mood swings</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front"><span>7</span></div>
+                        <div class="flip-card-back">
+                            <p>You make ordinary days special</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front"><span>8</span></div>
+                        <div class="flip-card-back">
+                            <p>You believe in me</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front"><span>9</span></div>
+                        <div class="flip-card-back">
+                            <p>You calm my madness</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front"><span>10</span></div>
+                        <div class="flip-card-back">
+                            <p>You accept me as I am</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front"><span>11</span></div>
+                        <div class="flip-card-back">
+                            <p>You make me feel important</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front"><span>12</span></div>
+                        <div class="flip-card-back">
+                            <p>You feel like home</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 5: The Hug Section -->
+    <section class="section hug-section" id="section5">
+        <div class="section-content">
+            <div class="hug-animation">
+                <div class="silhouette silhouette-left"></div>
+                <div class="silhouette silhouette-right"></div>
+                <div class="hug-glow"></div>
+            </div>
+            <div class="hug-text">
+                <p>"No matter how hard life becomes…</p>
+                <p>you will never face it alone again."</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final Section: The Secret Letter -->
+    <section class="section letter-section" id="section6">
+        <div class="section-content">
+            <h2 class="section-title">A Secret For You</h2>
+            <div class="envelope-container" id="envelopeContainer">
+                <div class="envelope" id="envelope">
+                    <div class="envelope-flap"></div>
+                    <div class="envelope-body">
+                        <div class="lock-icon">🔒</div>
+                    </div>
+                </div>
+                <p class="envelope-hint">Click to unlock</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Password Modal -->
+    <div class="modal" id="passwordModal">
+        <div class="modal-content">
+            <h3>Enter the password</h3>
+            <p class="modal-hint">Hint: The day we met (MMDD)</p>
+            <input type="password" id="passwordInput" maxlength="4" placeholder="••••">
+            <button class="submit-password" id="submitPassword">Unlock</button>
+            <p class="error-message" id="errorMessage">Incorrect password</p>
+        </div>
+    </div>
+
+    <!-- Letter Reveal -->
+    <div class="letter-reveal" id="letterReveal">
+        <div class="letter-content">
+            <div class="letter-glow"></div>
+            <div class="letter-paper">
+                <p class="letter-greeting">Baby,</p>
+                <p>Before you came into my life, days were just… days. I woke up, attended classes, came back, slept —
+                    everything felt normal but empty. I didn’t even realize something was missing until you arrived.</p>
+                <br>
+                <p>You didn’t just become my girlfriend, you slowly became my peace. The person I want to tell every
+                    small thing to even the most stupid things. When something good happens, I think of you first. When
+                    something goes wrong, I still think of you first.</p>
+                <br>
+                <p>TUMI MUK BOHUT BESI SPECIAL FEEL KORUA JANA NE BABY....I NEVER FELT THAT SPECIAL AND IMPORTANT BEFORE
+                    MEETING YOU</p>
+                <br>
+                <p>I don’t know how you did it, but you made me care about my life more. You made me attend classes,
+                    study, try to be a better person… not because you forced me, but because I *wanted* to become
+                    someone you’d always be proud of.</p>
+                <br>
+                <p>The truth is you didn’t just change my routine, you changed my heart.<br>The lonely phase of my life
+                    ended the day you came.</p>
+                <br>
+                <p>I don’t promise big things like movies. I just promise this:<br>no matter how hard life becomes, I
+                    will always choose you, talk to you, and stay. Not only on good days, but especially on bad days.
+                </p>
+                <br>
+                <p>Thank you for staying with me, understanding me, and loving me the way you do.</p>
+                <br>
+                <p>Happy Valentine’s Day, my favourite person.<br>I love you and honestly, life feels right with you in
+                    it.</p>
+                <p class="letter-signature">— Anurag.</p>
+            </div>
+            <div class="hearts-float">
+                <span>❤️</span><span>💕</span><span>💖</span><span>💗</span><span>💝</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Background Audio -->
+    <audio id="bgMusic" loop preload="auto">
+        <source src="assets/Edd_Sheeran_-_Perfect_(mp3.pm).mp3" type="audio/mpeg">
+    </audio>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
